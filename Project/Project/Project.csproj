@@ -69,6 +69,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\FormParagraphModel\ParagraphModel.cs" />
+    <Compile Include="Model\FormPathModel\PathModel.cs" />
+    <Compile Include="Model\FormPostModel\PostModel.cs" />
+    <Compile Include="rule\Rule.cs" />
+    <Compile Include="ViewModel\FormParagraphViewModel\ParagraphViewModel.cs" />
     <Compile Include="View\ListPath.xaml.cs">
       <DependentUpon>ListPath.xaml</DependentUpon>
     </Compile>
@@ -123,8 +128,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Model\" />
-    <Folder Include="ViewModel\" />
+    <Folder Include="ViewModel\FormPathViewModel\" />
+    <Folder Include="ViewModel\FormPostViewModel\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Stories.mdf">
