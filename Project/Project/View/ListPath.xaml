@@ -8,25 +8,40 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <!--List Path of story-->
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="30px">
+            <RowDefinition Height="30px" >
 
             </RowDefinition>
-            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="50px"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
         <!--Search story's title-->
-        <Grid Grid.Row="0">
-            <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="404" Margin="10,0,0,0"/>
+        <Grid Grid.Row="0" Grid.ColumnSpan="2">
+            <TextBox HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="251" Margin="10,0,0,0"/>
             <Button Content="Tìm kiếm" HorizontalAlignment="Left" Margin="432,3,0,0" VerticalAlignment="Top" Width="75"/>
 
         </Grid>
         <!--Description-->
-        <Grid Grid.Row="1">
+        <Grid Grid.Row="1" Grid.ColumnSpan="2">
 
         </Grid>
         <!--List stories-->
-        <Grid Grid.Row="2">
+        <Grid Grid.Row="2" Grid.ColumnSpan="2">
+            <DataGrid HorizontalAlignment="Left" Height="169" Margin="0,10,0,0" 
+                      VerticalAlignment="Top" Width="292" RenderTransformOrigin="0.5,0.5">
+                <DataGrid.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-0.455"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </DataGrid.RenderTransform>
+            </DataGrid>
 
         </Grid>
     </Grid>
