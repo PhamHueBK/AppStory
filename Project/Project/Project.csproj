@@ -69,12 +69,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+
     <Compile Include="DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+
     <Compile Include="View\ListPath.xaml.cs">
       <DependentUpon>ListPath.xaml</DependentUpon>
     </Compile>
@@ -140,8 +142,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Model\" />
-    <Folder Include="ViewModel\" />
+    <Folder Include="ViewModel\FormPathViewModel\" />
+    <Folder Include="ViewModel\FormPostViewModel\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database.mdf">
