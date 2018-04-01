@@ -18,7 +18,7 @@ namespace Project.View
     /// <summary>
     /// Interaction logic for Path_detail.xaml
     /// </summary>
-    public partial class Path_detail : UserControl
+    public partial class Path_detail : Window //UserControl
     {
         public Path_detail()
         {

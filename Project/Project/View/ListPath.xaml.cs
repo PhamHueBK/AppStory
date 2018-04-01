@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace Project.View
 {
@@ -20,9 +22,33 @@ namespace Project.View
     /// </summary>
     public partial class ListPath : Window
     {
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=G:\DotNet\App\AppStory\Project\Project\Database.mdf;Integrated Security=True");
+        SqlCommand cmd;
         public ListPath()
         {
             InitializeComponent();
+            //  cmd = new SqlCommand("insert into Paths values(@,@)",con);
+            //   cmd.Parameters.AddWithValue("",);
+            //   con.Open();
+            //    cmd.ExecuteNonQuery();
+            //   con.Close();
+               LoadData();
+        }
+        
+        public void LoadData()
+        {
+            con.Open();
+            cmd = con.CreateCommand();
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = "select * from [Paths]";
+            cmd.ExecuteNonQuery();
+            DataTable data = new DataTable();
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            adapter.Fill(data);
+            adapter.FillSchema(data, SchemaType.Source);
+            con.Close();
+
+
         }
     }
 }
