@@ -37,7 +37,7 @@ namespace Project.View
         
         public void LoadData()
         {
-            con.Open();
+            /*con.Open();
             cmd = con.CreateCommand();
             cmd.CommandType = System.Data.CommandType.Text;
             cmd.CommandText = "select * from [Paths]";
@@ -46,7 +46,7 @@ namespace Project.View
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             adapter.Fill(data);
             adapter.FillSchema(data, SchemaType.Source);
-            con.Close();
+            con.Close();*/
 
 
         }
