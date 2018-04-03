@@ -10,7 +10,8 @@ namespace Project
     {
         public List<string> fetch()
         {
-            return
+            List<string> data = new List<string>();
+            return data;
         }
         public Queue<string> Search(List<string> paragraps, string keyword)
         {
@@ -284,7 +285,7 @@ namespace Project
                 string phu = key[1].ToString() + key[2].ToString();
                 if ((key[0] == 'n') && ((words[0] == phu) || (words[1] == phu) || (words[2] == phu) || (words[3] == phu)))
                 {
-                   
+
                     return false;
                 }
                 else
@@ -375,7 +376,7 @@ namespace Project
 
     }
 
- class Program1
+    class Program1
     {
         public static void Main()
         {
@@ -726,6 +727,7 @@ namespace Project
 
 
     }
+}
 
 
 
